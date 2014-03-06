@@ -20,7 +20,7 @@ public class NotifyFrame extends MouseAdapter {
 	public static int height = (int) screenSize.getHeight();
 	public static String url = "www.google.com";
 	
-	public static JFrame jf = new JFrame();
+	private static JFrame jf = new JFrame();
 	public void drawFrame(){
 		jf.setTitle("DeskNotify");
 		jf.setType(javax.swing.JFrame.Type.UTILITY);
@@ -42,8 +42,10 @@ public class NotifyFrame extends MouseAdapter {
         	Desktop.getDesktop().browse(new URL("http://" + url).toURI());
 		} catch (Exception e2){}
 	}
+	/**
+	Core Library Method -- Ignore
+	*/
 	public void fadeIn(){
-		
 		 URL url = getClass().getResource("/res/alert.wav");
          AudioClip clip = java.applet.Applet.newAudioClip(url);
          clip.play();
@@ -59,6 +61,9 @@ public class NotifyFrame extends MouseAdapter {
 			}catch(Exception e ){}
 		}
 	}
+	/**
+	Core Library Method -- Ignore
+	*/
 	public void fadeOut(){
 		jf.setOpacity(1);
 		for(int i = 100; i > 0; i--){
@@ -69,11 +74,15 @@ public class NotifyFrame extends MouseAdapter {
 		}
 		setVisible(false);
 	}
-	private void setVisible(boolean bool){
+	/**
+	Core Library Method -- Ignore
+	*/
+	private void setVisible(boolean bool){	
 		jf.setVisible(bool);
 	}
 	public static void main(String[] args){
 		DeskNotify dn = new DeskNotify();
+		dn.setColor(255, 190, 100);
 		dn.setUrl("www.google.com");
 		dn.notify("This is a test notification!");
 	}

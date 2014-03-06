@@ -16,7 +16,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class NotifyPanel extends JPanel {
-	Color bg = new Color(50, 200, 255);
+	static Color bg = new Color(50, 200, 255);
 	private static NotifyFrame nf = new NotifyFrame();
 	
 	public static ImageIcon RedditIcoII;
@@ -26,13 +26,14 @@ public class NotifyPanel extends JPanel {
 	
 	
 	public void Init(){
+		/**
+		Core Library Method -- Ignore
+		*/
 		try {
 		setOpaque(false);
 		RedditIcoII  = new ImageIcon(getToolkit().getImage(getClass().getResource("/res/Alien.png")));
 		RedditIco = RedditIcoII.getImage();
 		} catch(Exception e){e.printStackTrace();}
-	}
-	public void playSound(){
 	}
 	public void paint(Graphics g){
 	super.paint(g);

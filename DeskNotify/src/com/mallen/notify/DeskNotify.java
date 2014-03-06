@@ -3,13 +3,20 @@ package com.mallen.notify;
 import java.awt.Color;
 
 public class DeskNotify {
+	/**
+	Used to set the URL that is opened when you click on the notification
+	*/
 	public void setUrl(String s){
 		NotifyFrame nf = new NotifyFrame();
 		nf.url = s;
+		
 	}
-	public void setColor(int r, int b, int g){
+	/**
+	Used to set the Color of the Dialog
+	*/
+	public void setColor(int r, int g, int b){
 		NotifyPanel np = new NotifyPanel();
-		np.bg = new Color(r,b,g);
+		np.bg = new Color(r,g,b);
 	}
 	public DeskNotify(){
 		NotifyFrame nf = new NotifyFrame();
@@ -18,6 +25,10 @@ public class DeskNotify {
 		np.Init();
 		nf.drawFrame();
 	}
+	/**
+	 Draws a notification dialog on the users screen
+	 String text - Body of the notification dialog
+	 */
 	public void notify(String text){
 		NotifyFrame nf = new NotifyFrame();
 		NotifyPanel np = new NotifyPanel();
