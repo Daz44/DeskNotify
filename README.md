@@ -23,6 +23,10 @@ JTP is developed using the following technolegy
 * [EclipseIDE] - A Java IDE.
 * [Java] - Java wrapper for Reddit
 
+Screenshots
+--------------
+![Alt text](http://gyazo.com/1b46ffe8d63518490aa3dbb290acaf94.png)
+
 Installation
 --------------
 <b> DOWNLOAD SOURCE </b>
@@ -30,6 +34,7 @@ Installation
     > Download .ZIP or Clone from GitHub Respitory
     > Edit Source & Recompile
 ```
+
 
 Example Usage
 --------------
